@@ -102,7 +102,8 @@ cardsss = [
   " Nomo",
   " Luff",
   " Helghie",
-  " James"
+  " James",
+  " Alif"
 ]
 
 limited = [

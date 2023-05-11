@@ -21,6 +21,33 @@ async def on_ready():
   print(f'logged in')
   await client.change_presence(activity=discord.Game('MemberDex'))
 
+  
+@client.command()
+async def register(ctx):
+
+  users = await get_data()
+
+async def open_account(user):
+
+  users = await get_data()
+
+
+  if str(user.id) in users:
+    return False
+  else:
+    users[str(user.id)] = {}
+    users[str(user.id)]["Cards"] = ""
+
+  with open("account.json", "w") as f:
+    json.dump(users,f)
+  return True
+
+async def get_data():
+  with open("account.json", "r") as f:
+    users = json.load(f)
+
+  return users
+
 
 
 @client.command()

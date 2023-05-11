@@ -230,7 +230,7 @@ async def claim(ctx):
     users = await get_data()
 
     card = random.choice(cardss)
-    card_image = f"C:\\Users\\Saddedin\\Desktop\\main\\Cards\\{card.strip()}.png"
+    card_image = f"C:\\Users\\nuhuhuheuhf\\Desktop\\main\\Cards\\{card.strip()}.png"
 
     user = ctx.author
     users[str(user.id)]["Cards"] += f"{card}"

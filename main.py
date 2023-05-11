@@ -225,28 +225,24 @@ async def get_data():
 
 
 @client.command()
-@commands.cooldown(1, 1200, commands.BucketType.user)
 async def claim(ctx):
+    await open_account(ctx.author)
+    users = await get_data()
 
-  await open_account(ctx.author)
+    card = random.choice(cardss)
+    card_image = f"C:\\Users\\Saddedin\\Desktop\\main\\Cards\\{card.strip()}.png"
 
-  things = random.choice(cardss)
+    user = ctx.author
+    users[str(user.id)]["Cards"] += f"{card}"
 
-  users = await get_data()
+    with open("account.json", "w") as f:
+        json.dump(users, f)
 
-  user = ctx.author
-
-  embed = discord.Embed(color=0x1abc9c)
-
-  embed.add_field(name="Congratulation on the claim!",
-                  value=f"You have just caught\n{things}",
-                  inline=False)
-  await ctx.send(embed=embed)
-
-  users[str(user.id)]["Cards"] += things
-
-  with open("account.json", "w") as f:
-    users = json.dump(users, f)
+    embed = discord.Embed(color=0x1abc9c)
+    embed.set_author(name="Claim Success!", icon_url=ctx.author.avatar_url)
+    embed.add_field(name="Congratulations on the claim!", value=f"You have just caught {card}", inline=False)
+    embed.set_image(url=f"attachment://{card}.png")
+    await ctx.send(embed=embed, file=discord.File(card_image, filename=f"{card}.png")
 
 
 @claim.error

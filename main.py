@@ -374,8 +374,27 @@ async def verify(ctx, card_name):
   if card_name == "Balls":
     await ctx.send(f"kys")
 
+@client.command()
+async def deletecard(ctx, card: str):
+    # Open the account of the user
+    await open_account(ctx.author)
 
-saved_messages = []
+    # Get the account data
+    users = await get_data()
+
+    # Check if the card exists in the user's inventory
+    if card not in users[str(ctx.author.id)]["Cards"]:
+        await ctx.send("You dont have that card")
+        return
+
+    # Remove the card from the user's inventory
+    users[str(ctx.author.id)]["Cards"] = users[str(ctx.author.id)]["Cards"].replace(card, "", 1)
+
+    # Update the account data
+    with open("account.json", "w") as f:
+        json.dump(users, f)
+
+    await ctx.send(f"{card} has been removed from your inventory")
 
 my_secret = os.environ['TOKEN']
 keep_alive()

@@ -103,7 +103,10 @@ cardsss = [
   " Luff",
   " Helghie",
   " James",
-  " Alif"
+  " Alif",
+  " 1.2",
+  " Mo Kush",
+  " Fortress"
 ]
 
 limited = [

@@ -18,7 +18,6 @@ client.remove_command('help')
 lis = [
 "cant show even after open sourcing"
 ]
-
 cards = [
 "cant show even after open sourcing"
 ]

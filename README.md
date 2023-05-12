@@ -12,7 +12,7 @@ pokemon catching type bot for some discord server
 
 - The only data that MemberDex collects about its users is their Discord usernames and IDs. This information is used solely for the purpose of operating the bot and improving the user experience.
 
-- MemberDex is available to users who are 13 years old or older. If you are under 13, you must have parental or guardian consent to use the bot.
+- MemberDex is available to users who are 14 years old or older. If you are under 14, you must have parental or guardian consent to use the bot.
 
 - MemberDex is completely free to use. However, the owner is open to donations to help support the ongoing development and maintenance of the bot.
 
@@ -23,5 +23,7 @@ pokemon catching type bot for some discord server
 - MemberDex is provided "as is" without any warranties or guarantees of any kind, express or implied.
 
 - MemberDex is designed to provide a fun and safe experience for users. The bot will never harm you or cause any damage to your Discord account or device. However, MemberDex cannot guarantee the behavior of other users or third-party services that may be used in conjunction with the bot.
+
+- MemberDex may use profanity and language that may offend others. MemberDex and its team is not responsible for any damages or losses that may occur as a result.
 
 - By using MemberDex, you agree to these terms and conditions and acknowledge that you have read and understood them in their entirety.
